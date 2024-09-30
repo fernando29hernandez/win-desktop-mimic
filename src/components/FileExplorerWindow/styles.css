@@ -1,0 +1,78 @@
+/* FileExplorerWindow.css */
+.file-explorer-window {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .file-explorer-window.active {
+    z-index: 1000;
+  }
+  
+  .window-title-bar {
+    background: #0078d4;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    cursor: move;
+    font-weight: bold;
+  }
+  
+  .window-title-bar span {
+    margin-left: 10px;
+  }
+  
+  .window-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .control-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .control-button:hover {
+    color: #ccc;
+  }
+  
+  .window-content {
+    display: flex;
+    height: calc(100% - 30px); /* Adjust height to fit within the window */
+  }
+  
+  .navigation-pane {
+    width: 200px;
+    background: #f1f1f1;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+  }
+  
+  .file-list {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #fafafa;
+  }
+  
+  /* Scrollbar styling */
+  .file-list::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .file-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+  }
+  
+  .file-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  

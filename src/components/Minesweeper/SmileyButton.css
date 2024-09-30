@@ -1,0 +1,22 @@
+/* src/SmileyButton.css */
+.smiley-button {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .smiley-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .smiley-button:active {
+    transform: scale(0.95);
+  }
+  

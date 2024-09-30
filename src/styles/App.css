@@ -1,0 +1,15 @@
+.desktop {
+  position: relative; /* Ensure icons are positioned relative to this container */
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Optional: to prevent scrollbars */
+}

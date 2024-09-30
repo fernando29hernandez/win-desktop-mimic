@@ -1,0 +1,87 @@
+/* src/Cell.css */
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #808080; /* Gray border for both cell states */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+
+  }
+  
+  /* Background color for not revealed cells */
+  .cell:not(.revealed) {
+    background-color: #c0c0c0; /* Light gray for hidden cells */
+    border: 1px solid #808080; /* Darker border for hidden cells */
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); /* Subtle inset shadow for hidden cells */
+  }
+  
+  /* Background color for revealed cells */
+  .cell.revealed {
+    background-color: #e0e0e0; /* Slightly lighter gray for revealed cells */
+    cursor: default;
+    transform: translateY(6px); /* Sunk effect */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); /* Inset shadow for depth */
+    font-size: 18px;
+    font-weight: 900;
+  }
+  
+  /* Effect when the cell is clicked */
+  .cell.revealed:active {
+    transform: translateY(10px); /* More pronounced sunk effect */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7); /* Stronger shadow on click */
+  }
+  
+  /* Style for mines and flagged cells */
+  .cell.mine {
+    background-color: #ff0000; /* Red background for mines */
+    color: #ffffff; /* White text color for mines */
+    border: 1px solid #c00000; /* Darker border for mines */
+    
+  }
+  
+  .cell.flagged {
+    background-color: #ffff00; /* Yellow background for flagged cells */
+    color: #000000; /* Black text color for flagged cells */
+    border: 1px solid #c0c000; /* Darker border for flagged cells */
+  }
+  
+  /* Color styles for numbers in revealed cells */
+  .cell.revealed.number-1 {
+
+    color: #0000ff; /* Blue for 1 */
+  }
+  
+  .cell.revealed.number-2 {
+    color: #00ff00; /* Green for 2 */
+  }
+  
+  .cell.revealed.number-3 {
+    color: #ff0000; /* Red for 3 */
+  }
+  
+  .cell.revealed.number-4 {
+    color: #000080; /* Dark Blue for 4 */
+  }
+  
+  .cell.revealed.number-5 {
+    color: #800080; /* Purple for 5 */
+  }
+  
+  .cell.revealed.number-6 {
+    color: #00ffff; /* Cyan for 6 */
+  }
+  
+  .cell.revealed.number-7 {
+    color: #000000; /* Black for 7 */
+  }
+  
+  .cell.revealed.number-8 {
+    color: #808080; /* Gray for 8 */
+  }
+  

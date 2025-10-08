@@ -24,8 +24,6 @@ const Taskbar = ({ apps, windows, openWindow, onStartClick, onWindowClick, onRes
             className={`window-button ${win.minimized ? 'minimized' : ''}`}
             onClick={() => win.minimized ? onRestoreWindow(win.id) : onWindowClick(win.id)}
           >
-            {/**win.minimized ?  <FaWindowMaximize /> : ''*/}
-            {/**win.title + "  "**/}
             <div className="icon-task">
               <img src={win.icon} alt={win.title} className="icon-image-task" />
               <span className="icon-label-task">{win.title}</span>

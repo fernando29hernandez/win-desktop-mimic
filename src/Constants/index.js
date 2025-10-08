@@ -6,7 +6,9 @@ const Apps = [
     { id: 5, title: 'AnimeList', icon: '/assets/icons/animev2.png', position: { x: 550, y: 150 },onClick:'Iframe',url:"https://fernando29hernandez.github.io/my-anime-list/",size:{ width: 1200, height: 600 } },
     { id: 6, title: 'ShortURL', icon: '/assets/icons/short.png', position: { x: 650, y: 150 },onClick:'Iframe',url:"https://fernando29hernandez.github.io/short-url/#",size:{ width: 900, height: 600 } },
     { id: 7, title: 'Minesweeper', icon: '/assets/icons/mine.png', position: { x: 800, y: 150 },onClick:'Minesweeper',size:{ width: 808, height: 495 } },
-    { id: 8, title: 'Resume', icon: '/assets/icons/resume.png', position: { x: 900, y: 150 },onClick:'Resume',size:{ width: 808, height: 495 } },
+    //{ id: 8, title: 'Resume', icon: '/assets/icons/resume.png', position: { x: 900, y: 150 },onClick:'Resume',size:{ width: 808, height: 495 } },
+    { id: 9, title: 'Command Line', icon: '/assets/icons/terminal.png', position: { x: 1000, y: 150 },onClick:'Command',size:{ width: 770, height: 495 } },
+    { id: 10, title: 'Pptx', icon: '/assets/icons/pptx.png', position: { x: 1100, y: 150 },onClick:'Pptx',size:{ width: 770, height: 495 } },
     
     //{ id: 7, title: 'GitHub', icon: '/assets/icons/folder.png', position: { x: 750, y: 150 },onClick:'Link',url: "https://github.com/fernando29hernandez" },
     

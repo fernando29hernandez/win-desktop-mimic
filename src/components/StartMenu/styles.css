@@ -13,7 +13,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Vista-like font */
     font-size: 14px;
     color: #000;
-    z-index: 1001; /* Ensure the start menu is above the taskbar */
+    z-index: 1010!important; /* Ensure the start menu is above the taskbar */
   }
   
   .start-menu-header {
@@ -96,4 +96,15 @@
   .start-menu-footer a:hover {
     background: rgba(0, 0, 0, 0.1); /* Light hover effect */
   }
+
+  .list-item-menu{
+    flex-direction:row;
+    display: flex;
+  }
   
+  .icon-image-start-menu {
+    width: 24px;
+    height:  24px;
+    margin-bottom: 5px;
+    image-rendering: pixelated;
+  }

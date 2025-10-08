@@ -9,6 +9,7 @@
     align-items: center;
     padding: 0 10px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1010; /* Ensure the taskbar is above other elements */
   }
   
   .win-start-button {

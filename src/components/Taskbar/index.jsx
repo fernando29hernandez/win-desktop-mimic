@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import StartMenu from './../StartMenu'; // Import StartMenu
-import './styles.css';
-import { FaWindowMaximize } from 'react-icons/fa';
+import StartMenu from './../StartMenu';
 
-const Taskbar = ({ windows, onStartClick, onWindowClick, onRestoreWindow }) => {
+import './styles.css';
+
+const Taskbar = ({ apps, windows, openWindow, onStartClick, onWindowClick, onRestoreWindow }) => {
 
   const [isStartMenuOpen, setIsStartMenuOpen] = useState(false);
 
@@ -13,10 +13,10 @@ const Taskbar = ({ windows, onStartClick, onWindowClick, onRestoreWindow }) => {
 
   return (
     <div className="taskbar">
-      <button className="win-start-button" onClick={()=>toggleStartMenu()}>
-          <img src={'/assets/icons/windows-start.png'} alt={"menu"} className="icon-start-img" />
+      <button className="win-start-button" onClick={() => toggleStartMenu()}>
+        <img src={'/assets/icons/windows-start.png'} alt={"menu"} className="icon-start-img" />
       </button>
-      <StartMenu isOpen={isStartMenuOpen} onClose={() => setIsStartMenuOpen(false)} />
+      <StartMenu apps={apps} openWindow={openWindow} isOpen={isStartMenuOpen} onClose={() => setIsStartMenuOpen(false)} />
       <div className="window-buttons">
         {windows.map(win => (
           <button
@@ -30,8 +30,8 @@ const Taskbar = ({ windows, onStartClick, onWindowClick, onRestoreWindow }) => {
               <img src={win.icon} alt={win.title} className="icon-image-task" />
               <span className="icon-label-task">{win.title}</span>
             </div>
-            
-            
+
+
           </button>
         ))}
       </div>

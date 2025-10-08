@@ -2,7 +2,8 @@
 import React from 'react';
 import './styles.css'; // Use the updated CSS for styling
 
-const StartMenu = ({ isOpen, onClose }) => {
+const StartMenu = ({ apps, openWindow, isOpen, onClose }) => {
+  console.log(apps)
   if (!isOpen) return null;
 
   return (
@@ -13,18 +14,19 @@ const StartMenu = ({ isOpen, onClose }) => {
       </div>
       <div className="start-menu-body">
         <div className="start-menu-section">
-          <h3>Pinned</h3>
+          <h3>Programs</h3>
           <ul>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Internet</a></li>
-          </ul>
-        </div>
-        <div className="start-menu-section">
-          <h3>Recent</h3>
-          <ul>
-            <li><a href="#">Recent Doc 1</a></li>
-            <li><a href="#">Recent Doc 2</a></li>
+            {apps.map((item) => {
+              return (
+                <li onClick={() => openWindow(item.onClick, item)} key={item.id} className='list-item-menu'>
+
+                  <img src={item?.icon} alt={"label"} className="icon-image-start-menu" />
+                  <a href="#">{item.title}</a>
+                </li>
+              )
+            })
+
+            }
           </ul>
         </div>
         <div className="start-menu-footer">
